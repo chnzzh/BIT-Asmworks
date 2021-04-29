@@ -14,8 +14,8 @@ MyID		DWORD	1120181414
 
 .code
 start:
-		MOV		EAX, 1120181414			; 直接寻址
-		MOV		ESI, offset MyClass		; 直接寻址
+		MOV		EAX, MyID				; 直接寻址
+		MOV		ESI, offset MyClass
 		MOV		EBX, [ESI]				; 寄存器间接寻址
 		MOV		ECX, EBX				; 寄存器寻址
 		invoke	printf, offset szFmtStr, ECX, offset MyName, EAX

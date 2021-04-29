@@ -1,4 +1,4 @@
-;PROG01 / GUI / Filename:Lab1_GUI.asm
+;PROG02 / GUI / Filename:Lab1_GUI.asm
 .386
 .model	flat, stdcall
 option	casemap:none
@@ -15,10 +15,7 @@ szMsg	BYTE	"Class:07111806 Name:郑之涵 ID:1120181414", 0
 
 .code
 start:
-		;MOV		AX, offset	szTitle			; 直接寻址
-		;MOV		ESI, offset MyClass		; 直接寻址
-		;MOV		EBX, [ESI]				; 寄存器间接寻址
-		;MOV		ECX, EBX				; 寄存器寻址
+		MOV		AL, szTitle
 		invoke	MessageBox,
 				NULL,
 				offset szMsg,
